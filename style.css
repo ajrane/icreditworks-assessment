@@ -1,0 +1,365 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/background image.png') no-repeat center center/cover;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+/* ================= LEFT SECTION (Login) ================= */
+.left-section {
+  position: relative;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.login-container {
+  position: absolute;
+  top: 230.25px;
+  left: 139.51px;
+  width: 341.23px;
+  height: 517.5px;
+  z-index: 2;
+  background: #FFFFFF;
+  padding: 30px 30px 70px;
+  border-radius: 3px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.logo-divider {
+  width: calc(100% + 60px);
+  height: 3px;
+  margin-left: -30px;
+  background-color: #E26B0A;
+  margin-bottom: 1rem;
+}
+
+.login-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.5rem 25px 0.5rem 10px;
+  margin: 0 auto 1rem;
+  border: 1px solid #ccc;
+  width: 90%;
+  height: 20%;
+}
+
+input[type="password"] {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23979797' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E") no-repeat right center;
+  background-size: 24px 24px;
+  background-position: calc(100% - 10px) center;
+}
+
+.remember-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.remember-me input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #979797;
+  border-radius: 1px;
+}
+
+.remember-me label {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 450;
+  line-height: 100%;
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: #111111;
+  margin-top: 5%;
+}
+
+.forgot-password {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #486082;
+  text-align: center;
+  font-weight: 450;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+
+}
+
+.login-btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 199.5px;
+  height: 60px;
+  background-color: #E26B0A;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+.security-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5E6B75;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  border-radius: 0 0 3px 3px;
+}
+
+.lock-icon {
+  vertical-align: middle;
+  width: 16px;
+  margin-right: 0.3rem;
+}
+
+/* ================= TEXT SECTION ================= */
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+  margin-left: -3%;
+}
+
+.heading {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 420px;
+}
+
+/* ================= IMAGE SECTION ================= */
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.circle-img {
+  display: block;
+  margin-top: -3%;
+  margin-left: -55%;
+}
+
+.desktop-img {
+  display: block;
+  margin-top: -42%;
+  margin-left: -80%;
+  width: 160%;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* ---------- Desktop View (max-width: 1440px) ---------- */
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+  .login-container {
+    top: 100px;
+    left: 77.51px;
+    width: 348.23px;
+    height: 517.5px;
+  }
+
+  .text-section {
+    flex: 0 0 320px;
+    margin-left: 6%;
+  }
+
+  .text-section .heading {
+    width: 236.08px;
+    height: 137.05px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-section .description {
+    width: 278px;
+    height: 133px;
+    font-size: 0.9rem;
+  }
+
+  .circle-img {
+    width: 476.4px;
+    height: 454.5px;
+    margin-top: -20px;
+    margin-left: -60%;
+  }
+
+  .desktop-img {
+    width: 965.07px;
+    height: 723.8px;
+    margin-top: -25%;
+    margin-left: -70%;
+  }
+}
+
+/* ---------- Small Desktop View (max-width: 1280px) ---------- */
+@media screen and (max-width: 1280px) and (min-width: 376px) {
+  .login-container {
+    top: calc(191.25px * 0.8889);
+    left: calc(77.51px * 0.8889);
+    width: 309.54px;
+    height: 460px;
+  }
+
+  .text-section {
+    flex: 0 0 300px;
+    margin-left: 6%;
+  }
+
+  .text-section .heading {
+    width: 237.41px;
+    height: 137.82px;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-section .description {
+    width: 240px;
+    height: 118px;
+    font-size: 0.85rem;
+  }
+
+  .circle-img {
+    width: 423.47px;
+    height: 404px;
+    margin-top: -20px;
+    margin-left: -55%;
+  }
+
+  .desktop-img {
+    width: 857.84px;
+    height: 643.38px;
+    margin-top: -25%;
+    margin-left: -65%;
+  }
+}
+
+/* ---------- Mobile View (max-width: 375px) ---------- */
+@media screen and (max-width: 375px) {
+
+  .text-section,
+  .image-section {
+    display: none;
+  }
+
+  .container {
+    display: block;
+    height: auto;
+    background: none;
+  }
+
+  .left-section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .login-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px 20px 60px;
+  }
+
+  .security-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5E6B75;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    border-radius: 0;
+    z-index: 10;
+  }
+
+  .chat-icon {
+    display: none;
+  }
+}
